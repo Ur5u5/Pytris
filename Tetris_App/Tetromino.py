@@ -8,8 +8,12 @@ class Tetromino():
     _tiles: List[Tile]
 
     @property
-    def Tiles(self):
+    def Tiles(self) -> List[Tile]:
         return self._tiles
+    
+    @Tiles.setter
+    def Tiles(self, value: List[Tile]) -> None:
+        self._tiles = value
     
     def __init__(self, rotationState: BasicRotationState) -> None:
         self.transition_to(rotationState)
@@ -23,3 +27,9 @@ class Tetromino():
 
     def rotate_left(self):
         self._rotationState.rotate_left()
+
+    def get_next_tile_positions(self) -> List[Tile]:
+        return self._rotationState.get_next_tile_position()
+    
+    def get_previous_tile_positions(self) -> List[Tile]:
+        return  self._rotationState.get_previous_tile_position()
