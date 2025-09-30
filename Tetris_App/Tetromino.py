@@ -29,7 +29,7 @@ class Tetromino():
         self._rotationState.rotate_left()
 
     def get_next_tile_positions(self) -> List[Tile]:
-        return self._rotationState.get_next_tile_position()
+        return self._rotationState.get_next_tile_position() # type: ignore
     
     def get_previous_tile_positions(self) -> List[Tile]:
-        return  self._rotationState.get_previous_tile_position()
+        return  self._rotationState.get_previous_tile_position() # type: ignore

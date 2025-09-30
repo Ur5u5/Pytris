@@ -29,4 +29,4 @@ class GameBoard():
         self._board_changed = True
 
     def _create_tiles(self) -> List[List[Tile]]:
-        return [[Tile(Coordinates(x,y), TileColor.Transparent) for y in range(self._width)] for x in range(self._height)]
+        return [[Tile(Coordinates(x,y), TileColor.Transparent) for y in range(self._height)] for x in range(self._width)]
