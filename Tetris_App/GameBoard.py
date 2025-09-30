@@ -2,7 +2,7 @@ from typing import List
 from Tetris_App.Tile import Tile, Coordinates, TileColor
 
 class GameBoard():
-    def __init(self, width: int, height: int):
+    def __init__(self, width: int, height: int):
         self._width: int = width
         self._height: int = height
         self._tiles: List[List[Tile]] = self._create_tiles()
@@ -22,7 +22,7 @@ class GameBoard():
         
         return self._tiles[tile.Position.X][tile.Position.Y].Color is not TileColor.Transparent
     
-    def set_tiles(self, tiles List[Tile]) -> None:
+    def set_tiles(self, tiles: List[Tile]) -> None:
         for tile in tiles:
             self._tiles[tile.Position.X][tile.Position.Y] = tile
 

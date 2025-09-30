@@ -1,6 +1,6 @@
 from typing import List
 from abc import ABC
-from BasicRotationState import BasicRotationState
+from Tetris_App.BasicRotationState import BasicRotationState
 from Tetris_App.Tile import Coordinates, Tile 
 
 class ISizeRotationState(BasicRotationState, ABC):

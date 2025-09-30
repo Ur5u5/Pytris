@@ -1,6 +1,6 @@
 from typing import List
-from BasicRotationState import BasicRotationState
-from Tile import Tile
+from Tetris_App.BasicRotationState import BasicRotationState
+from Tetris_App.Tile import Tile
 
 
 class Tetromino():

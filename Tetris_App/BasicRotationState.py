@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 from typing import List
-from Tetromino import Tetromino
-from Tile import Tile
+
+from Tetris_App.Tile import Tile
 
 class BasicRotationState(ABC):
-    _tetromino: Tetromino
 
     def set_tetromino(self, tetromino):
-        self._testomino = tetromino
+        from Tetris_App.Tetromino import Tetromino
+        self._testomino: Tetromino = tetromino
 
     @abstractmethod
     def rotate_right(self) -> None:
@@ -18,9 +18,9 @@ class BasicRotationState(ABC):
         ...
 
     @abstractmethod
-    def get_next_tile_position(self) -> List[Tile]:
+    def get_next_tile_positions(self) -> List[Tile]:
         ...
 
     @abstractmethod
-    def get_previous_tile_position(self) -> List[Tile]:
+    def get_previous_tile_positions(self) -> List[Tile]:
         ...

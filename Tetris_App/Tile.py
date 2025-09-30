@@ -1,22 +1,13 @@
+from dataclasses import dataclass
 from enum import Enum
 from turtle import position
 
 from pyparsing import col
 
-
+@dataclass
 class Coordinates:
-    def __init__(self, x: int, y: int):
-        self._x = x
-        self._y = y
-
-    @property
-    def X(self) -> int:
-        return self._x
-    
-    @property
-    def Y(self) -> int:
-        return self._y
-
+    X: int
+    Y: int
 class TileColor(Enum):
     Lightblue = 1,
     Blue = 2,
@@ -28,18 +19,8 @@ class TileColor(Enum):
     Transparent = 8
 
 
+@dataclass
 class Tile:
-    def __init__(self, position: Coordinates, color: TileColor):
-        self._position = position
-        self._color = color
-        
-    @property
-    def Position(self) -> Coordinates:
-        return self._position
-    
-    @property
-    def Color(self) -> TileColor:
-        return self._color
+    Position: Coordinates
+    Color: TileColor
 
-
-        
