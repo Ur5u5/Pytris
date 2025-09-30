@@ -13,8 +13,12 @@ class GameBoard():
         return self._tiles
     
     @property
-    def BoardChanged(self):
+    def BoardChanged(self) -> bool:
         return self._board_changed
+    
+    @BoardChanged.setter
+    def BoardChanged(self, value: bool):
+        self._board_changed = value
         
     def is_position_occupied(self, tile: Tile) -> bool:
         if (tile.Position.X < 0 or tile.Position.X >= self._width or tile.Position.Y < 0 or tile.Position.Y >= self._height):
